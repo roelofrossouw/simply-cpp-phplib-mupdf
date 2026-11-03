@@ -1,0 +1,1 @@
+PDF previews for PHP: SC\PdfPreview draws a PDF's pages as PNG or JPEG images in memory, on MuPDF (AGPL-3.0)

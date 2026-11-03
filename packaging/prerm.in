@@ -1,0 +1,9 @@
+#!/bin/sh
+# Disables the sc_mupdf extension before it's removed (not on upgrade: the new one is enabled again).
+set -e
+if [ "$1" = remove ] || [ "$1" = deconfigure ]; then
+    if command -v phpdismod >/dev/null 2>&1; then
+        phpdismod -v @SC_PHPLIB_MUPDF_PHP_MINOR@ -s ALL sc_mupdf || true
+    fi
+fi
+exit 0

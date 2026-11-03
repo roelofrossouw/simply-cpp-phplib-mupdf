@@ -1,0 +1,3 @@
+; configuration for the simply-cpp MuPDF (sc_mupdf) module: after sc, whose SC\Exception it throws
+; priority=40
+extension=sc_mupdf.so
