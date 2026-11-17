@@ -20,9 +20,9 @@ message(STATUS "SimplyCPP ${SC_MODULE} Version: ${SC_VERSION}")
 ################
 # sc-phplib's AGPL part: sc-mupdf (MuPDF, AGPL-3.0) does the work, through its shared library (its
 # runtime package). It's an extension of its own so that sc-phplib stays Apache-2.0.
-find_or_install_package(sc-core simply-cpp-dev simply-cpp 2.2.0)
+find_or_install_package(sc-core simply-cpp-dev simply-cpp 3.0.0)
 # SC\PdfPreview: pages drawn as PNG, and as JPEG since sc-mupdf 4.2.1.
-find_or_install_package(sc-mupdf simply-cpp-mupdf-dev simply-cpp-mupdf 4.5.0)
+find_or_install_package(sc-mupdf simply-cpp-mupdf-dev simply-cpp-mupdf 5.0.0)
 
 ## PHP ##
 # An extension is built for one PHP version: the one each Ubuntu release ships (jammy 8.1, noble
@@ -113,4 +113,4 @@ set(CPACK_DEBIAN_RUNTIME_PACKAGE_CONTROL_EXTRA
 # needed (with it, SC\Exception is sc's), but recommended: what else a PHP page wants of simply-cpp.
 set(CPACK_DEBIAN_RUNTIME_PACKAGE_RECOMMENDS "simply-cpp-phplib")
 package_sc_module(DEPENDS "phpapi-${SC_PHPLIB_MUPDF_PHP_API}" "php${SC_PHPLIB_MUPDF_PHP_MINOR}-common"
-        "simply-cpp (>= 2.2.0~)" "simply-cpp-mupdf (>= 4.5.0~)")
+        "simply-cpp (>= 3.0.0~)" "simply-cpp-mupdf (>= 5.0.0~)")
