@@ -12,7 +12,7 @@
 
 #include "php_glue.h"
 
-#include <mupdf.h>
+#include <sc/mupdf/mupdf.h>
 
 #include <algorithm>
 #include <cstring>
